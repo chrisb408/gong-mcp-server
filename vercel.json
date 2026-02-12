@@ -1,19 +1,12 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "api/mcp.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/mcp",
-      "dest": "/api/mcp"
+      "source": "/mcp",
+      "destination": "/api/mcp"
     },
     {
-      "src": "/(.*)",
-      "dest": "/api/mcp"
+      "source": "/(.*)",
+      "destination": "/api/mcp"
     }
   ],
   "functions": {
